@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>田代福進堂｜熊本県八代市の和菓子・洋菓子</title>
+<meta name="description" content="熊本県八代市萩原町の田代福進堂。開運福ぼうろ・栗まんじゅう・かすてらなど、手仕事の和洋菓子をお届けします。地方発送・ご贈答も承ります。TEL 0965-34-2255">
+<style>
+  :root{
+    --ink:#2b2320;
+    --ink-soft:#5c524b;
+    --paper:#f7f2e9;
+    --paper-2:#efe7d7;
+    --accent:#8c2e2e;
+    --accent-2:#b9843f;
+    --gold:#a8842c;
+    --line:#e0d5c0;
+    --shadow:0 10px 40px rgba(43,35,32,.10);
+    --serif:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Hiragino Mincho Pro","Noto Serif JP",serif;
+    --sans:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.9;-webkit-font-smoothing:antialiased;letter-spacing:.02em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .sans{font-family:var(--sans)}
+
+  /* ヘッダー */
+  header{position:sticky;top:0;z-index:50;background:rgba(247,242,233,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-size:20px;letter-spacing:.12em;font-weight:700}
+  .brand small{display:block;font-size:10px;letter-spacing:.3em;color:var(--accent-2);font-family:var(--sans)}
+  .menu{display:flex;gap:26px;font-size:14px;font-family:var(--sans)}
+  .menu a{position:relative;padding:4px 0;color:var(--ink-soft)}
+  .menu a:hover{color:var(--accent)}
+  .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent);transition:.3s}
+  .menu a:hover::after{width:100%}
+  .nav-cta{font-family:var(--sans);font-size:13px;padding:8px 16px;border:1px solid var(--accent);color:var(--accent);border-radius:2px;transition:.2s}
+  .nav-cta:hover{background:var(--accent);color:#fff}
+  .menu-toggle{display:none;background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .social-top{display:flex;align-items:center;gap:9px}
+  .sns{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.2s}
+  .sns svg{width:18px;height:18px;fill:currentColor}
+  .sns-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+  .sns-fb{background:#1877f2}
+  .sns:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+
+  /* ヒーロー */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#f7f2e9,#efe7d7)}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:78px 0 86px}
+  .hero .lead{font-size:13px;letter-spacing:.32em;color:var(--accent-2);font-family:var(--sans);margin-bottom:20px}
+  .hero h1{font-size:clamp(32px,5vw,54px);line-height:1.42;font-weight:700;margin-bottom:24px}
+  .hero h1 .em{color:var(--accent)}
+  .hero p{font-size:16px;color:var(--ink-soft);max-width:30em;margin-bottom:32px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:var(--sans);font-size:15px;padding:14px 28px;border-radius:2px;transition:.25s;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:8px}
+  .btn-main{background:var(--accent);color:#fff}
+  .btn-main:hover{background:#701f1f;transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-sub{border-color:var(--ink);color:var(--ink)}
+  .btn-sub:hover{background:var(--ink);color:var(--paper)}
+  .btn-line{background:#06c755;color:#fff}
+  .btn-line:hover{background:#05a648;transform:translateY(-2px);box-shadow:var(--shadow)}
+  .hero-art{aspect-ratio:4/3;border-radius:6px;box-shadow:var(--shadow);overflow:hidden;position:relative;background:#efe7d7}
+  .hero-art img{width:100%;height:100%;object-fit:cover;display:block}
+  .seal{position:absolute;top:18px;right:18px;width:66px;height:66px;border-radius:50%;background:var(--paper);color:var(--accent);display:flex;align-items:center;justify-content:center;text-align:center;font-size:20px;font-weight:700;box-shadow:var(--shadow);border:1px solid var(--accent)}
+
+  /* セクション共通 */
+  section{padding:84px 0}
+  .sec-head{text-align:center;margin-bottom:50px}
+  .sec-head .ja{font-size:clamp(26px,3.4vw,36px);font-weight:700;position:relative;display:inline-block}
+  .sec-head .en{display:block;font-size:12px;letter-spacing:.35em;color:var(--accent-2);font-family:var(--sans);margin-top:10px}
+  .sec-head .ja::before,.sec-head .ja::after{content:"";position:absolute;top:50%;width:28px;height:1px;background:var(--line)}
+  .sec-head .ja::before{left:-44px}.sec-head .ja::after{right:-44px}
+  .sec-note{text-align:center;color:var(--ink-soft);font-family:var(--sans);font-size:14px;margin-top:-30px;margin-bottom:44px}
+
+  /* こだわり */
+  .about{background:var(--paper)}
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:38px 28px;text-align:center;transition:.3s}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .card .ico{font-size:34px;margin-bottom:16px}
+  .card h3{font-size:19px;margin-bottom:12px}
+  .card p{font-size:14px;color:var(--ink-soft);font-family:var(--sans);line-height:1.85}
+
+  /* お品書き */
+  .products{background:linear-gradient(180deg,#efe7d7,#f7f2e9)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .item{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 6px 22px rgba(43,35,32,.06);transition:.3s;display:flex;flex-direction:column}
+  .item:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .item .thumb{aspect-ratio:3/2;overflow:hidden;background:#efe7d7}
+  .item .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}
+  .item:hover .thumb img{transform:scale(1.05)}
+  .g1{background:linear-gradient(135deg,#d7a24f,#8c5a2e)}
+  .g2{background:linear-gradient(135deg,#b5763a,#7a3b1f)}
+  .g3{background:linear-gradient(135deg,#e0c05a,#a8842c)}
+  .g4{background:linear-gradient(135deg,#c98b4a,#8c2e2e)}
+  .g5{background:linear-gradient(135deg,#caa46a,#7a5a2f)}
+  .g6{background:linear-gradient(135deg,#d98f6a,#a8452c)}
+  .g7{background:linear-gradient(135deg,#e6c98a,#b9843f)}
+  .g8{background:linear-gradient(135deg,#c9b07a,#8a6a3a)}
+  .g9{background:linear-gradient(135deg,#dcb45a,#a8842c)}
+  .g10{background:linear-gradient(135deg,#e0b47a,#9a6a3a)}
+  .item .body{padding:18px 20px;flex:1;display:flex;flex-direction:column}
+  .item h3{font-size:18px;margin-bottom:4px}
+  .item .price{font-family:var(--sans);color:var(--accent);font-size:16px;font-weight:700;margin-bottom:8px}
+  .item p{font-size:13px;color:var(--ink-soft);font-family:var(--sans);line-height:1.8}
+  .badge{display:inline-block;font-family:var(--sans);font-size:11px;color:#fff;background:var(--accent-2);padding:2px 8px;border-radius:2px;margin-left:6px;vertical-align:middle}
+  .ship-note{margin-top:36px;background:#fff;border:1px dashed var(--accent-2);border-radius:6px;padding:16px 22px;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-align:center}
+
+  /* 進物・ケーキ */
+  .special{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+  .sp-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px 28px}
+  .sp-card h3{font-size:20px;margin-bottom:10px;color:var(--accent)}
+  .sp-card p{font-family:var(--sans);font-size:14px;color:var(--ink-soft)}
+  .sp-card .more{display:inline-block;margin-top:12px;font-family:var(--sans);font-size:13px;color:var(--accent);font-weight:700}
+  .sp-card .more:hover{text-decoration:underline}
+
+  /* ケーキ予約 */
+  .cakes{background:linear-gradient(180deg,#f7f2e9,#efe7d7)}
+  .cake-photos{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
+  .cake-photos figure{margin:0}
+  .cake-photos img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#fff;border-radius:8px;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .cake-photos figcaption{text-align:center;font-family:var(--sans);font-size:15px;font-weight:700;color:var(--accent);margin-top:12px}
+  .cake-body{max-width:640px;margin:0 auto}
+  .cake-body h3{font-size:clamp(22px,3vw,30px);margin-bottom:14px;text-align:center}
+  .cake-body>p{font-family:var(--sans);font-size:15px;color:var(--ink-soft);margin-bottom:22px;line-height:1.9;text-align:center}
+  .price-wrap{overflow-x:auto;margin-bottom:14px}
+  .cake-price{width:100%;border-collapse:collapse;font-family:var(--sans);background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 16px rgba(43,35,32,.06)}
+  .cake-price th,.cake-price td{padding:11px 10px;text-align:center;border-bottom:1px solid var(--line);font-size:14px;white-space:nowrap}
+  .cake-price thead th{color:#fff;background:var(--accent);font-size:13px;font-weight:700;letter-spacing:.04em}
+  .cake-price tbody tr:last-child td{border-bottom:0}
+  .cake-price td:first-child,.cake-price th:first-child{text-align:left;color:var(--ink);font-weight:700}
+  .cake-price .yen{color:var(--ink-soft)}
+  .cake-note{font-family:var(--sans);font-size:13px;color:var(--ink-soft);margin-bottom:22px;line-height:1.9}
+  .cake-note b{color:var(--accent)}
+  .cake-custom{background:#fff;border-left:4px solid var(--accent-2);border-radius:0 6px 6px 0;padding:14px 18px;margin-bottom:16px;box-shadow:0 4px 16px rgba(43,35,32,.05)}
+  .cake-custom h4{font-family:var(--sans);font-size:15px;color:var(--accent);margin-bottom:5px}
+  .cake-custom p{font-family:var(--sans);font-size:13px;color:var(--ink-soft);line-height:1.85;margin:0}
+  .cake-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ご注文・お支払い */
+  .order{background:var(--paper)}
+  .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .obox h3{font-size:20px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--line)}
+  .obox ul{list-style:none;font-family:var(--sans);font-size:15px}
+  .obox li{padding:9px 0 9px 30px;position:relative;color:var(--ink-soft);border-bottom:1px dotted var(--line)}
+  .obox li b{color:var(--ink)}
+  .obox li::before{content:"";position:absolute;left:6px;top:17px;width:8px;height:8px;background:var(--accent-2);border-radius:50%}
+  .steps{counter-reset:s}
+  .steps li{padding-left:42px}
+  .steps li::before{content:counter(s);counter-increment:s;background:var(--accent);color:#fff;width:24px;height:24px;border-radius:50%;left:0;top:11px;display:flex;align-items:center;justify-content:center;font-size:13px;font-family:var(--sans)}
+  .small-note{font-family:var(--sans);font-size:12px;color:var(--ink-soft);margin-top:14px;line-height:1.9}
+
+  /* 想い */
+  .story{background:var(--ink);color:var(--paper)}
+  .story .wrap{max-width:760px;text-align:center}
+  .story .ja{font-size:clamp(24px,3vw,32px);margin-bottom:24px;line-height:1.7}
+  .story p{font-size:15px;color:#d9cfc0;font-family:var(--sans);line-height:2}
+  .story .en{font-size:12px;letter-spacing:.35em;color:var(--accent-2);font-family:var(--sans);margin-bottom:16px;display:block}
+
+  /* LINE */
+  .connect{background:linear-gradient(135deg,#06c755,#04a648);color:#fff;text-align:center}
+  .connect h2{font-size:clamp(24px,3vw,32px);margin-bottom:14px}
+  .connect p{font-family:var(--sans);font-size:15px;color:rgba(255,255,255,.92);margin-bottom:28px}
+  .connect .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .connect .btn-w{background:#fff;color:#06a04a;font-weight:700}
+  .connect .btn-w:hover{background:#f0fff5}
+  .connect .btn-ig{background:transparent;border:1px solid #fff;color:#fff}
+  .connect .btn-ig:hover{background:rgba(255,255,255,.15)}
+
+  /* 店舗案内 */
+  .access{background:var(--paper)}
+  .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch}
+  .info dl{display:grid;grid-template-columns:100px 1fr;row-gap:16px;font-family:var(--sans);font-size:15px}
+  .info dt{color:var(--accent);font-weight:700}
+  .info dd{color:var(--ink-soft)}
+  .map-box{min-height:280px;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .map-box iframe{width:100%;height:100%;min-height:280px;border:0;display:block}
+
+  /* CTA */
+  .cta{background:linear-gradient(135deg,#8c2e2e,#701f1f);color:#fff;text-align:center}
+  .cta h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:14px}
+  .cta p{font-family:var(--sans);color:rgba(255,255,255,.9);margin-bottom:30px}
+  .cta .tel{font-size:clamp(30px,4vw,42px);font-family:var(--sans);font-weight:700;letter-spacing:.04em;display:inline-block;margin-bottom:8px}
+  .cta .hours{font-family:var(--sans);font-size:14px;color:rgba(255,255,255,.85)}
+
+  /* フッター */
+  footer{background:var(--ink);color:#cdbfb0;font-family:var(--sans);font-size:13px;padding:42px 0}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .foot .brand{color:var(--paper);font-family:var(--serif);font-size:18px;letter-spacing:.1em}
+  .foot a:hover{color:#fff}
+
+  /* 追従電話ボタン(スマホ) */
+  .fab{display:none}
+  @media(max-width:860px){
+    .menu,.nav-cta{display:none}
+    .menu-toggle{display:block}
+    .menu.open{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--paper);padding:18px 24px;gap:18px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+    .hero-inner{grid-template-columns:1fr;text-align:center}
+    .hero p{margin-left:auto;margin-right:auto}
+    .btns{justify-content:center}
+    .hero-art{max-width:300px;margin:0 auto}
+    .features,.grid{grid-template-columns:1fr 1fr}
+    .special,.order-grid,.access-grid{grid-template-columns:1fr}
+    .fab{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--accent);color:#fff;width:58px;height:58px;border-radius:50%;align-items:center;justify-content:center;font-size:24px;box-shadow:var(--shadow)}
+  }
+  @media(max-width:560px){
+    .features,.grid{grid-template-columns:1fr}
+    section{padding:60px 0}
+    .sec-head .ja::before,.sec-head .ja::after{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header>
+  <div class="wrap nav">
+    <div class="brand">田代福進堂<small>TASHIRO FUKUSHINDO</small></div>
+    <nav class="menu" id="menu">
+      <a href="#about">こだわり</a>
+      <a href="#products">お品書き</a>
+      <a href="#cakes">ケーキ予約</a>
+      <a href="#order">ご注文方法</a>
+      <a href="#access">店舗案内</a>
+    </nav>
+    <div class="nav-right">
+      <div class="social-top">
+        <a href="https://www.instagram.com/tashirofukushindo/" target="_blank" rel="noopener" class="sns sns-ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/tashirofukushindo/" target="_blank" rel="noopener" class="sns sns-fb" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <a href="tel:0965342255" class="nav-cta sans">☎ 0965-34-2255</a>
+      <button class="menu-toggle" id="toggle" aria-label="メニュー">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero" style="padding:0">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="lead">熊本県八代市 萩原町 ・ 和菓子と洋菓子のお店</p>
+      <h1>ひとつひとつ、<br><span class="em">心を込めて</span>焼き上げました。</h1>
+      <p>八代・萩原町の田代福進堂です。看板の「開運福ぼうろ」をはじめ、和菓子から焼き菓子・ケーキまで、素材の甘さを活かした手仕事の味を毎日お作りしています。ご贈答や地方発送も承ります。</p>
+      <div class="btns">
+        <a href="#products" class="btn btn-main">お品書きを見る</a>
+        <a href="tel:0965342255" class="btn btn-sub">☎ 電話で注文する</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="seal">福</div>
+      <img src="images/shop.jpg" alt="田代福進堂の店舗（八代市萩原町）">
+    </div>
+  </div>
+</section>
+
+<!-- こだわり -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="ja">私たちのこだわり</span><span class="en">OUR COMMITMENT</span></div>
+    <div class="features">
+      <div class="card"><div class="ico">🍯</div><h3>素材の自然な甘さ</h3><p>はちみつやザラメなど、素材そのものが持つやさしい甘さを大切に。甘さ控えめで、毎日食べても飽きない味に仕上げています。</p></div>
+      <div class="card"><div class="ico">🤲</div><h3>ひとつずつ手仕事で</h3><p>生地づくりから焼き上げ、仕上げまで丁寧に。ひとつひとつ心を込めて、その日いちばんの状態でお渡しします。</p></div>
+      <div class="card"><div class="ico">🎁</div><h3>贈り物・地方発送も</h3><p>進物・ご贈答はのし掛けに対応。ゆうちょ振込での地方発送も承っています。大切な方へ八代の味をお届けください。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- お品書き -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-head"><span class="ja">お品書き</span><span class="en">OUR SWEETS</span></div>
+    <p class="sec-note">価格はすべて税込です</p>
+    <div class="grid">
+      <div class="item"><div class="thumb"><img src="images/fukubouro.jpg" alt="開運福ぼうろ" loading="lazy"></div><div class="body"><h3>開運福ぼうろ</h3><div class="price">150円</div><p>はちみつ入りのやさしい甘さ。そのままでも、牛乳に浸しても、軽くトーストしても美味しいです。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/kuri.jpg" alt="栗まんじゅう" loading="lazy"></div><div class="body"><h3>栗まんじゅう</h3><div class="price">220円</div><p>ほどよい甘さの餡に栗を加えて、生地で包み仕上げて焼いた人気の和菓子です。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/lemon.jpg" alt="レモンケーキ" loading="lazy"></div><div class="body"><h3>レモンケーキ</h3><div class="price">250円</div><p>生地にレモンピールを加え、表面をレモンチョコで包んだ、ほどよい甘さの焼き菓子です。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/kasutera-manju.jpg" alt="かすてら万十" loading="lazy"></div><div class="body"><h3>かすてら万十</h3><div class="price">200円</div><p>かすてらと同じ材料で作った生地で、ほどよい甘さの白餡を包み上げて焼いた和菓子です。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/madeleine.jpg" alt="マドレーヌ" loading="lazy"></div><div class="body"><h3>マドレーヌ</h3><div class="price">240円</div><p>生地に洋酒に漬け込んだ干しぶどう・カシューナッツ・クルミを混ぜ合わせ、食べ応えのある焼き菓子です。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/rakugan.jpg" alt="らくがん" loading="lazy"></div><div class="body"><h3>らくがん</h3><div class="price">250円</div><p>口に含むと溶け込む生地とこし餡を中に入れ、桜の木型で形作った和菓子です。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/shu.jpg" alt="シュークリーム" loading="lazy"></div><div class="body"><h3>シュークリーム<span class="badge">店頭のみ</span></h3><div class="price">250円</div><p>香ばしく焼いたシュー皮に、カスタードと生クリームを合わせたくちどけ滑らかなクリームを仕上げました。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/purin.jpg" alt="プリン" loading="lazy"></div><div class="body"><h3>プリン<span class="badge">店頭のみ</span></h3><div class="price">300円</div><p>卵に牛乳と生クリームを加えて蒸し上げた、滑らかでどこか懐かしくホッとする味です。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/kasutera.jpg" alt="かすてら" loading="lazy"></div><div class="body"><h3>かすてら（1袋）</h3><div class="price">600円</div><p>材料の自然な甘さを活かし、底にザラメを敷き詰め、ひとつひとつ丁寧に心を込めて焼き上げました。</p></div></div>
+      <div class="item"><div class="thumb"><img src="images/rollcake.jpg" alt="ロールケーキ" loading="lazy"></div><div class="body"><h3>ロールケーキ<span class="badge">店頭のみ</span></h3><div class="price">1,100円</div><p>ふんわり焼いた生地に甘さ控えめの生クリームを包み、4等分にしてあります。</p></div></div>
+    </div>
+
+    <div class="ship-note">🚚 <b>シュークリーム・プリン・ロールケーキ</b>の地方発送は受け付けておりません。あらかじめご了承ください。</div>
+
+    <div class="special">
+      <div class="sp-card"><h3>🎀 進物・贈り物</h3><p>ご要望に応じて詰め合わせを対応いたします。数量が多い時はお早めのご予約をお願いいたします。のし掛けも承ります。</p></div>
+      <div class="sp-card"><h3>🎂 お誕生日・記念日ケーキ</h3><p>お誕生日やクリスマスなど、大切な日のケーキも心を込めてお作りします。ご予約にて承ります。</p><a href="#cakes" class="more">ケーキのご予約について →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ケーキのご予約 -->
+<section class="cakes" id="cakes">
+  <div class="wrap">
+    <div class="sec-head"><span class="ja">ケーキのご予約</span><span class="en">CAKE ORDER</span></div>
+    <div class="cake-photos">
+      <figure><img src="images/cake.jpg" alt="生クリームケーキ" loading="lazy"><figcaption>生クリームケーキ</figcaption></figure>
+      <figure><img src="images/cake-choco.jpg" alt="生チョコケーキ" loading="lazy"><figcaption>生チョコケーキ</figcaption></figure>
+    </div>
+    <div class="cake-body">
+        <h3>大切な日に、手作りのケーキを。</h3>
+        <p>お誕生日・クリスマス・記念日など、特別な日のケーキをひとつひとつ心を込めてお作りします。ご予約制で承っております。</p>
+        <div class="price-wrap">
+          <table class="cake-price">
+            <thead><tr><th>サイズ</th><th>生クリームケーキ</th><th>生チョコケーキ</th></tr></thead>
+            <tbody>
+              <tr><td>15cm</td><td class="yen">4,100円</td><td class="yen">4,200円</td></tr>
+              <tr><td>18cm</td><td class="yen">5,200円</td><td class="yen">5,300円</td></tr>
+              <tr><td>21cm</td><td class="yen">6,500円</td><td class="yen">6,600円</td></tr>
+              <tr><td>24cm</td><td class="yen">8,000円</td><td class="yen">8,100円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cake-custom">
+          <h4>特注ケーキも承ります</h4>
+          <p>ご希望やご予算に合わせた特別なケーキもお作りします。お誕生日や記念日に、世界にひとつだけのケーキをどうぞ。</p>
+        </div>
+        <p class="cake-note">価格はすべて税込です。お受け取りは店頭にて／ご予約は<b>お早めに</b>お願いします。メッセージプレートもご相談ください。</p>
+        <div class="cake-cta">
+          <a href="https://lin.ee/XHC3Bup" target="_blank" rel="noopener" class="btn btn-line">💬 LINEでケーキを予約</a>
+          <a href="tel:0965342255" class="btn btn-main">☎ 電話で予約する</a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ご注文・お支払い -->
+<section class="order" id="order">
+  <div class="wrap">
+    <div class="sec-head"><span class="ja">ご注文・お支払い</span><span class="en">HOW TO ORDER</span></div>
+    <div class="order-grid">
+      <div class="obox">
+        <h3>ご注文方法</h3>
+        <ul>
+          <li>📞 <b>お電話</b>　0965-34-2255</li>
+          <li>📠 <b>FAX</b>　電話番号と同じです</li>
+          <li>💬 <b>LINE公式</b>からも承ります</li>
+        </ul>
+        <p class="small-note">
+          ご注文の際は、次の内容をお伝えください。<br>
+          ・お名前　・ご住所　・お電話番号<br>
+          ・ご希望の商品名と個数<br>
+          ※箱代・送料は別途かかります。
+        </p>
+      </div>
+      <div class="obox">
+        <h3>お支払い方法（地方発送）</h3>
+        <ul class="steps">
+          <li>商品と一緒に<b>納品書・請求書</b>を同封してお届けします</li>
+          <li>請求書に記載の<b>口座</b>へお振込みをお願いいたします</li>
+        </ul>
+        <p class="small-note">
+          ※振込手数料はお客様のご負担となります。<br>
+          ※お振込みの明細書をもって領収書とさせていただきます。<br>
+          ご不明な点はお気軽にお問い合わせくださいませ。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 想い -->
+<section class="story" id="story">
+  <div class="wrap">
+    <span class="en">OUR STORY</span>
+    <div class="ja">「おいしいね」の、その先へ。</div>
+    <p>祝いの日も、なんでもない日も。和菓子や焼き菓子はいつも、人と人のあいだにそっと寄り添ってきました。田代福進堂は、八代・萩原町でお客様に育てていただいたお店です。これからも変わらぬ手仕事で、地域の暮らしに小さな幸せを添えていきます。</p>
+  </div>
+</section>
+
+<!-- LINE / Instagram -->
+<section class="connect">
+  <div class="wrap">
+    <h2>LINE・Instagramでもつながれます</h2>
+    <p>新商品や季節のお菓子、お得な情報をお届け。ご注文もLINEから承ります。</p>
+    <div class="row">
+      <a href="https://lin.ee/XHC3Bup" target="_blank" rel="noopener" class="btn btn-w">💬 LINEで友だち追加</a>
+      <a href="https://www.instagram.com/tashirofukushindo/" target="_blank" rel="noopener" class="btn btn-ig">📷 Instagramを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- 店舗案内 -->
+<section class="access" id="access">
+  <div class="wrap">
+    <div class="sec-head"><span class="ja">店舗案内</span><span class="en">ACCESS</span></div>
+    <div class="access-grid">
+      <div class="info">
+        <dl>
+          <dt>店名</dt><dd>田代福進堂</dd>
+          <dt>住所</dt><dd>熊本県八代市萩原町一丁目3-36</dd>
+          <dt>TEL / FAX</dt><dd>0965-34-2255</dd>
+          <dt>営業時間</dt><dd>9:00 〜 17:30</dd>
+          <dt>定休日</dt><dd>日曜日 及び 臨時休業あり</dd>
+        </dl>
+      </div>
+      <div class="map-box">
+        <iframe src="https://maps.google.com/maps?q=%E7%86%8A%E6%9C%AC%E7%9C%8C%E5%85%AB%E4%BB%A3%E5%B8%82%E8%90%A9%E5%8E%9F%E7%94%BA%E4%B8%80%E4%B8%81%E7%9B%AE3-36&output=embed" loading="lazy" title="田代福進堂の地図"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>ご予約・お問い合わせ</h2>
+    <p>ご贈答やまとめてのご注文もお気軽に。お電話にて承っております。</p>
+    <a href="tel:0965342255" class="tel">☎ 0965-34-2255</a>
+    <div class="hours">営業時間 9:00〜17:30 ／ 定休日 日曜日</div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer>
+  <div class="wrap foot">
+    <div class="brand">田代福進堂</div>
+    <div>熊本県八代市萩原町一丁目3-36　｜　TEL/FAX 0965-34-2255</div>
+    <div>© 田代福進堂 All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- スマホ用 追従電話ボタン -->
+<a href="tel:0965342255" class="fab" aria-label="電話する">☎</a>
+
+<script>
+  var t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',function(){m.classList.toggle('open');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');});});
+</script>
+
+</body>
+</html>
